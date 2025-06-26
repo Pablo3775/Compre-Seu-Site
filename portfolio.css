@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ff4444;
+}
+
+.navbar {
+  display: flex;
+  gap: 50px;  /* espaço entre os links */
+  flex-wrap: wrap;
+}
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  color: #ff4444;
+}
+
+/* Login igual aos outros links */
+.login-btn {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  color: #ff4444;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hero - tela cheia com decorações */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #111, #1f1f1f);
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #ff4444;
+}
+
+.hero p {
+  font-size: 1.3em;
+  color: #ccc;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+}
+
+.decoracao-bg {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 68, 68, 0.2), transparent 70%);
+  animation: girar 30s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Conteúdo com animação fade-in */
+.conteudo {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.conteudo.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.conteudo h2 {
+  color: #ff4444;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.conteudo ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+  color: #999;
+  font-size: 0.9em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    background: #1f1f1f;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Modal pop-up */
+.modal {
+  display: none; /* oculto por padrão */
+  position: fixed;
+  z-index: 10000; /* acima de tudo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* scroll se precisar */
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: #222;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  box-shadow: 0 0 15px #ff4444;
+  animation: popupFadeIn 0.4s ease forwards;
+  position: relative;
+}
+
+.close {
+  color: #ff4444;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.Roxin {
+    color: red;
+}
+.Roxin {
+    position: relative;
+    left: 20px;
+}

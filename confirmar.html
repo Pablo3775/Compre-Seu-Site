@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confirmar Código</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="decoracao-bg"></div>
+
+  <div class="Cube">
+    <div id="codigo-step">
+      <h2>Digite o código enviado por email</h2>
+      <input type="text" id="codigo" placeholder="Código" required />
+      <button class="LoginButton" onclick="mostrarNovaSenha()">Confirmar</button>
+    </div>
+
+    <div id="nova-senha-step" style="display:none;">
+      <h2>Redefinir Senha</h2>
+      <div class="password-box">
+        <input type="password" id="nova-senha" placeholder="Nova senha" required />
+        <span onclick="togglePassword('nova-senha', this)">Mostrar</span>
+      </div>
+      <div class="password-box">
+        <input type="password" id="confirma-senha" placeholder="Confirmar senha" required />
+        <span onclick="togglePassword('confirma-senha', this)">Mostrar</span>
+      </div>
+      <button class="LoginButton"><a href="login.html">Salvar</a></button>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+  <script>
+    function mostrarNovaSenha() {
+      document.getElementById('codigo-step').style.display = 'none';
+      document.getElementById('nova-senha-step').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
