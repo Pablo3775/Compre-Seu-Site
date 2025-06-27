@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #111, #222);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px red;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  animation: aparecer 0.7s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mensagem-inicial {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+button {
+  background: red;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px red;
+}
+
+button:hover {
+  background: darkred;
+}
+
+#resposta {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: left;
+}
+
+#imagem img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px red;
+}
+#resposta img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px red;
+  display: block;
+}
+.loading {
+  animation: blink 1.2s infinite;
+  color: #ff4444;
+}
+@keyframes blink {
+  0%, 50%, 100% {opacity: 1;}
+  25%, 75% {opacity: 0.3;}
+}

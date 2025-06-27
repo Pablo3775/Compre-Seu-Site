@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PabloIA - Inteligência Artificial Local</title>
+  <link rel="stylesheet" href="PabloIa.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 PabloIA</h1>
+    <p class="mensagem-inicial">
+      Olá! Eu sou a <strong>PabloIA</strong> em fase de teste.<br>
+      Pergunte qualquer coisa ou me ensine comandos como:<br>
+      <em>se eu falar fogo diga que queima!</em><br>
+      Também posso mostrar imagens com:<br>
+      <em>faça uma imagem de um dragão</em>
+    </p>
+
+    <textarea id="pergunta" placeholder="Digite sua pergunta ou comando..."></textarea>
+    <button onclick="buscarResposta()">Perguntar</button>
+
+    <div id="resposta"></div>
+    <div id="imagem"></div>
+  </div>
+
+  <script src="PabloIa.js"></script>
+</body>
+</html>
