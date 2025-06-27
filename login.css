@@ -95,6 +95,27 @@ input {
   font-size: 16px;
 }
 
+/* Corrigido */
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 70px;
+}
+
+.password-box span {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ccc;
+  user-select: none;
+}
+
 .LoginButton {
   background-color: white;
   color: black;
@@ -104,19 +125,6 @@ input {
   border-radius: 30px;
   cursor: pointer;
   margin-top: 10px;
-}
-
-.password-box {
-  position: relative;
-}
-
-.password-box span {
-  position: absolute;
-  right: 20px;
-  top: 13px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #ccc;
 }
 
 @keyframes fadeIn {
