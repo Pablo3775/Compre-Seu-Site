@@ -12,8 +12,8 @@
   <div class="Cube">
     <div id="codigo-step">
       <h2>Digite o código enviado por email</h2>
-      <input type="text" id="codigo" placeholder="Código" required />
-      <button class="LoginButton" onclick="mostrarNovaSenha()">Confirmar</button>
+      <input type="text" id="codigo" placeholder="Código (6 dígitos)" required maxlength="6" minlength="6" pattern="[0-9]*" inputmode="numeric" />
+      <button class="LoginButton" onclick="validarCodigo()">Confirmar</button>
     </div>
 
     <div id="nova-senha-step" style="display:none;">
@@ -32,6 +32,15 @@
 
   <script src="login.js"></script>
   <script>
+    function validarCodigo() {
+      const codigo = document.getElementById('codigo').value.trim();
+      if (/^\d{6}$/.test(codigo)) {
+        mostrarNovaSenha();
+      } else {
+        alert("Digite um código válido com exatamente 6 números.");
+      }
+    }
+
     function mostrarNovaSenha() {
       document.getElementById('codigo-step').style.display = 'none';
       document.getElementById('nova-senha-step').style.display = 'block';
